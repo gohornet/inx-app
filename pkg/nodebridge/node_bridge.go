@@ -110,8 +110,8 @@ type NodeBridge interface {
 	// PruningEpoch returns the pruning epoch.
 	PruningEpoch() iotago.EpochIndex
 
-	// RequestTips requests tips.
-	RequestTips(ctx context.Context, count uint32) (strong iotago.BlockIDs, weak iotago.BlockIDs, shallowLike iotago.BlockIDs, err error)
+	// BlockIssuance requests the necessary data to issue a block.
+	BlockIssuance(ctx context.Context, maxParentCount uint32) (*api.IssuanceBlockHeaderResponse, error)
 }
 
 var _ NodeBridge = &nodeBridge{}
