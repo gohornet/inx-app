@@ -177,8 +177,8 @@ github.com/holiman/uint256 v1.2.4 h1:jUc4Nk8fm9jZabQuqr2JzednajVmBpC+oiTiXZJEApU
 github.com/holiman/uint256 v1.2.4/go.mod h1:EOMSn4q6Nyt9P6efbI3bueV4e1b3dGlUCXeiRV4ng7E=
 github.com/iancoleman/orderedmap v0.3.0 h1:5cbR2grmZR/DiVt+VJopEhtVs9YGInGIxAoMJn+Ichc=
 github.com/iancoleman/orderedmap v0.3.0/go.mod h1:XuLcCUkdL5owUCQeF2Ue9uuw1EptkJDkXXS7VoV7XGE=
-github.com/iotaledger/hive.go/app v0.0.0-20240320122938-13a946cf3c7a h1:RBVqC94WNqxTu9m3/W6R9StvyExARdEcJEhGD2AvScE=
-github.com/iotaledger/hive.go/app v0.0.0-20240320122938-13a946cf3c7a/go.mod h1:/DNKnCGg3bhFHCxMUsAeCNPOFi8XcWlNnt4y0V00p1E=
+github.com/iotaledger/hive.go/app v0.0.0-20240419094509-31dbb7270ad9 h1:ioVfqMH2pVInrq5ECyX11CPMaX1GoSmf9OdjXuou0qs=
+github.com/iotaledger/hive.go/app v0.0.0-20240419094509-31dbb7270ad9/go.mod h1:aroo/1Q7hSdtjnqNzRoyOxRAhc4n++lzQIIRVUoEmIo=
 github.com/iotaledger/hive.go/constraints v0.0.0-20240419094509-31dbb7270ad9 h1:uqfHdZy4zYmoZmvxZkt7SGPTmpM2MbsF7oO0izRdNQo=
 github.com/iotaledger/hive.go/constraints v0.0.0-20240419094509-31dbb7270ad9/go.mod h1:JF7jjkL6tSUOXm23SWadBzBrl7eJk1DQRLc/fNoVZ+o=
 github.com/iotaledger/hive.go/core v1.0.0-rc.3.0.20240419094509-31dbb7270ad9 h1:tolw9bD7ZpPjFqxndeFeoJvTDvtjPlZV9l+KcJeb1Sk=
@@ -191,8 +191,8 @@ github.com/iotaledger/hive.go/ierrors v0.0.0-20240419094509-31dbb7270ad9 h1:AMTS
 github.com/iotaledger/hive.go/ierrors v0.0.0-20240419094509-31dbb7270ad9/go.mod h1:GQY0/35sjgT9Poi1Vrs9kFVvAkuKzGXfVh4j6CBXsAA=
 github.com/iotaledger/hive.go/lo v0.0.0-20240419094509-31dbb7270ad9 h1:u/eppYqakPRU+IYFRVSz2Wht5ghPHIRH7ZLLPusO43o=
 github.com/iotaledger/hive.go/lo v0.0.0-20240419094509-31dbb7270ad9/go.mod h1:bSVsU1c4je63jbBS+u/CBRzOuxpjIiALZ6/vquCbw6k=
-github.com/iotaledger/hive.go/log v0.0.0-20240419090243-5c7bf1e68073 h1:8BFgfHAyleesFjzu9mf+xWWVG6WBvWewsXRVwv2YhCc=
-github.com/iotaledger/hive.go/log v0.0.0-20240419090243-5c7bf1e68073/go.mod h1:8V0edSUFsFsZp3w4InwQtXA9xP+ox4H3IjIfZvStlHI=
+github.com/iotaledger/hive.go/log v0.0.0-20240419094509-31dbb7270ad9 h1:Q0JF2Kl/R0itZXAEztgVEtWd9XEz3tAbQNw2NUFVBVA=
+github.com/iotaledger/hive.go/log v0.0.0-20240419094509-31dbb7270ad9/go.mod h1:8V0edSUFsFsZp3w4InwQtXA9xP+ox4H3IjIfZvStlHI=
 github.com/iotaledger/hive.go/runtime v0.0.0-20240419094509-31dbb7270ad9 h1:IlefVRTrMeWb1L7JiCHr4mWTHgJ+cxI1e6HhMHHTRnc=
 github.com/iotaledger/hive.go/runtime v0.0.0-20240419094509-31dbb7270ad9/go.mod h1:+lCLTDV7ldfvbqV6WCl0xCajrfbL54ZEmnnsx1mEHLA=
 github.com/iotaledger/hive.go/serializer/v2 v2.0.0-rc.1.0.20240419094509-31dbb7270ad9 h1:+cCt2sCQfhcapN/bPjDSv2Ub1uT0S62HH5Q1WTs3e1A=

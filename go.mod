@@ -6,10 +6,10 @@ require (
 	github.com/dustin/go-humanize v1.0.1
 	github.com/grpc-ecosystem/go-grpc-middleware v1.4.0
 	github.com/grpc-ecosystem/go-grpc-prometheus v1.2.0
-	github.com/iotaledger/hive.go/app v0.0.0-20240320122938-13a946cf3c7a
+	github.com/iotaledger/hive.go/app v0.0.0-20240419094509-31dbb7270ad9
 	github.com/iotaledger/hive.go/ierrors v0.0.0-20240419094509-31dbb7270ad9
 	github.com/iotaledger/hive.go/lo v0.0.0-20240419094509-31dbb7270ad9
-	github.com/iotaledger/hive.go/log v0.0.0-20240419090243-5c7bf1e68073
+	github.com/iotaledger/hive.go/log v0.0.0-20240419094509-31dbb7270ad9
 	github.com/iotaledger/hive.go/runtime v0.0.0-20240419094509-31dbb7270ad9
 	github.com/iotaledger/hive.go/serializer/v2 v2.0.0-rc.1.0.20240419094509-31dbb7270ad9
 	github.com/iotaledger/inx/go v1.0.0-rc.2.0.20240419095729-912f1c2df45d
