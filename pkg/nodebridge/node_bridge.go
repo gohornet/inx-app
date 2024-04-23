@@ -74,10 +74,8 @@ type NodeBridge interface {
 	BlockMetadata(ctx context.Context, blockID iotago.BlockID) (*api.BlockMetadataResponse, error)
 	// ListenToBlocks listens to blocks.
 	ListenToBlocks(ctx context.Context, consumer func(block *iotago.Block, rawData []byte) error) error
-	// ListenToAcceptedBlocks listens to accepted blocks.
-	ListenToAcceptedBlocks(ctx context.Context, consumer func(blockMetadata *api.BlockMetadataResponse) error) error
-	// ListenToConfirmedBlocks listens to confirmed blocks.
-	ListenToConfirmedBlocks(ctx context.Context, consumer func(blockMetadata *api.BlockMetadataResponse) error) error
+	// ListenToBlockMetadata listens to block metadata changes (pending, accepted, confirmed, dropped).
+	ListenToBlockMetadata(ctx context.Context, consumer func(blockMetadata *api.BlockMetadataResponse) error) error
 
 	// TransactionMetadata returns the transaction metadata for the given transaction ID.
 	TransactionMetadata(ctx context.Context, transactionID iotago.TransactionID) (*api.TransactionMetadataResponse, error)

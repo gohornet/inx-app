@@ -182,10 +182,7 @@ func (t *TangleListener) listenToAcceptedBlocks(ctx context.Context, cancel cont
 	}
 
 	if err := ListenToStream(ctx, stream.Recv, func(inxMetadata *inx.BlockMetadata) error {
-		metadata, err := inxMetadata.Unwrap()
-		if err != nil {
-			return ierrors.Wrap(err, "failed to unwrap metadata in listenToAcceptedBlocks")
-		}
+		metadata := inxMetadata.Unwrap()
 
 		t.triggerBlockAcceptedCallback(metadata)
 		t.blockAcceptedNotifier.Notify(metadata.BlockID)
