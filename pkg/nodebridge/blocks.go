@@ -15,7 +15,7 @@ func (n *nodeBridge) ActiveRootBlocks(ctx context.Context) (map[iotago.BlockID]i
 		return nil, err
 	}
 
-	return response.Unwrap()
+	return response.Unwrap(), nil
 }
 
 // SubmitBlock submits the given block.
@@ -50,7 +50,7 @@ func (n *nodeBridge) BlockMetadata(ctx context.Context, blockID iotago.BlockID) 
 		return nil, err
 	}
 
-	return inxBlockMetadata.Unwrap()
+	return inxBlockMetadata.Unwrap(), nil
 }
 
 // ListenToBlocks listens to blocks.
@@ -70,44 +70,17 @@ func (n *nodeBridge) ListenToBlocks(ctx context.Context, consumer func(block *io
 	return nil
 }
 
-// ListenToAcceptedBlocks listens to accepted blocks.
-func (n *nodeBridge) ListenToAcceptedBlocks(ctx context.Context, consumer func(*api.BlockMetadataResponse) error) error {
-	stream, err := n.client.ListenToAcceptedBlocks(ctx, &inx.NoParams{})
+// ListenToBlockMetadata listens to block metadata changes (pending, accepted, confirmed, dropped).
+func (n *nodeBridge) ListenToBlockMetadata(ctx context.Context, consumer func(*api.BlockMetadataResponse) error) error {
+	stream, err := n.client.ListenToBlockMetadata(ctx, &inx.NoParams{})
 	if err != nil {
 		return err
 	}
 
 	if err := ListenToStream(ctx, stream.Recv, func(inxBlockMetadata *inx.BlockMetadata) error {
-		blockMetadata, err := inxBlockMetadata.Unwrap()
-		if err != nil {
-			return err
-		}
-
-		return consumer(blockMetadata)
+		return consumer(inxBlockMetadata.Unwrap())
 	}); err != nil {
-		n.LogErrorf("ListenToAcceptedBlocks failed: %s", err.Error())
-		return err
-	}
-
-	return nil
-}
-
-// ListenToConfirmedBlocks listens to confirmed blocks.
-func (n *nodeBridge) ListenToConfirmedBlocks(ctx context.Context, consumer func(*api.BlockMetadataResponse) error) error {
-	stream, err := n.client.ListenToConfirmedBlocks(ctx, &inx.NoParams{})
-	if err != nil {
-		return err
-	}
-
-	if err := ListenToStream(ctx, stream.Recv, func(inxBlockMetadata *inx.BlockMetadata) error {
-		blockMetadata, err := inxBlockMetadata.Unwrap()
-		if err != nil {
-			return err
-		}
-
-		return consumer(blockMetadata)
-	}); err != nil {
-		n.LogErrorf("ListenToConfirmedBlocks failed: %s", err.Error())
+		n.LogErrorf("ListenToBlockMetadata failed: %s", err.Error())
 		return err
 	}
 
